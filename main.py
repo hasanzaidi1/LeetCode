@@ -1,6 +1,5 @@
 def isSubsequence( s, t):
 
-  result = []
   SList = []
   TList = []
   
@@ -9,20 +8,15 @@ def isSubsequence( s, t):
   for itemT in t:
       TList.append(itemT)
   
-  for alphT in TList:
-      for alphS in SList:
+  for alphS in SList:
+      for alphT in TList:
           if alphS != alphT:
-              continue
+            TList.remove(alphT)
           else:
-              if alphT not in result:
-                  result.append(alphT)
-                  SList.remove(alphS)
+            continue
+          
   
-  result = ''.join(result)
-  print(TList)
-  print(SList)
-  
-  return(result==s)
+  return(TList==SList)
 
 
 print(isSubsequence("abc", "ahbgdc"))
