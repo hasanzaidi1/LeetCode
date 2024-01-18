@@ -27,5 +27,5 @@ def isSubsequence( s, t):
 
 print(isSubsequence("abc", "ahbgdc"))
 print(isSubsequence("axc", "ahbgdc"))
-print(isSubsequence("ab", "baab"))
+print(isSubsequence("ab", "baab")) # Should be true
   
