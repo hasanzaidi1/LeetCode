@@ -1,25 +1,8 @@
-def isSubsequence( s, t):
-
-  SList = []
-  TList = []
-  
-  for itemS in s:
-      SList.append(itemS)
-  for itemT in t:
-      TList.append(itemT)
-  
-  for alphS in SList:
-      for alphT in TList:
-          if alphS != alphT:
-            TList.remove(alphT)
-          else:
-            continue
-          
-  
-  return(TList==SList)
+import isSubsequence as iS
 
 
-print(isSubsequence("abc", "ahbgdc"))
-print(isSubsequence("axc", "ahbgdc"))
-print(isSubsequence("ab", "baab")) # Should be true
-  
+print(iS.isSubsequence("abc", "ahbgdc"))
+print(iS.isSubsequence("axc", "ahbgdc"))
+print(iS.isSubsequence("ab", "baab")) # Should be true
+
+print(iS.isSubsequence("abc", "abc")) # Should be true
