@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.py": [
+    "removeDuplicates.py": [
       {
-        "id": "e9454153-473b-4cbd-8655-83c26c7d0b23",
-        "line": 9,
-        "version": 394,
-        "index": 99
+        "id": "52ec5653-9278-4259-bd40-abfdc1a2968c",
+        "line": 1,
+        "version": 100,
+        "index": 0
       }
     ]
   }
