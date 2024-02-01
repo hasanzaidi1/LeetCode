@@ -21,12 +21,14 @@ def isSubsequence( s, t):
         continue
       else:
         TList.remove(alphT)
+    # SList.remove(alphS)
         
 
   print(TList)
-  print(SList)
   
-  return(TList==SList)
+  given_s = list(s)
+  print(given_s)
+  return(TList==given_s)
 
 
 
