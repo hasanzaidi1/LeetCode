@@ -8,6 +8,7 @@ def isSubsequence(t, s):
       if letter_in_s == letter_in_t:
         newList.append(letter_in_s)
         s = chop_array_until_item(s,letter_in_s) 
+        break
 
   #compare s with updated t.list
   if list(t) == newList:
