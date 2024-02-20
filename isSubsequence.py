@@ -1,35 +1,21 @@
 
-def isSubsequence( s, t):
+def isSubsequence(t, s):
 
-  SList = []
-  TList = []
-  
-  for itemS in s:
-    SList.append(itemS)
-  for itemT in t:
-    TList.append(itemT)
-  
-  print()
-  print(TList)
-  print(SList)
-  print()
+  newList = []
 
-  
-  for alphS in SList:
-    for alphT in TList:
-      if alphS == alphT:
-        continue
-      else:
-        TList.remove(alphT)
-        
+  for letter_in_t in t:
+    for letter_in_s in s:
+      if letter_in_s == letter_in_t:
+        newList.append(letter_in_s)
+        index = s.index(letter_in_s)  
+        s = s[index+1:]
+        break
 
-  print(TList)
-  print(SList)
-  
-  return(TList==SList)
+  #compare s with updated t.list
+  if list(t) == newList:
+    return True
+  else:
+    return False
 
 
-
-
-
-
+      
