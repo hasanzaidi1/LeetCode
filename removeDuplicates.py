@@ -3,10 +3,10 @@ def removeDuplicates(nums):
   
   for num in nums:
 
-    if num not in uniqueNums:
-      uniqueNums.append(num)
+      if num not in uniqueNums:
+          uniqueNums.append(num)
 
-    else:
-      continue
-
-  return uniqueNums
+      else:
+          continue
+  nums = uniqueNums
+  return nums
