@@ -2,6 +2,7 @@ import isSubsequence as iS
 import removeDuplicates as rD
 import countHi as ch
 import cat_dog as cd
+import count_code as cc
 
 print()
 
@@ -39,6 +40,16 @@ print(cd.cat_dog('dogogcat'))
 print(cd.cat_dog('dog'))
 print(cd.cat_dog('cat'))
 
+print()
 
+print(cc.count_code('aaacodebbb'))
+print(cc.count_code('codexxcode'))
+print(cc.count_code('cozexxcope'))
+print(cc.count_code('cozfxxcope'))
+print(cc.count_code('xxcozeyycop'))
+print(cc.count_code('abcxyz'))
+print(cc.count_code('code'))
+print(cc.count_code('ode'))
+print(cc.count_code('AAcodeBBcoleCCccoreDD'))
 
 
