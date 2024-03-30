@@ -3,6 +3,7 @@ import removeDuplicates as rD
 import countHi as ch
 import cat_dog as cd
 import count_code as cc
+import end_other as eo
 
 print()
 
@@ -52,4 +53,8 @@ print(cc.count_code('code'))
 print(cc.count_code('ode'))
 print(cc.count_code('AAcodeBBcoleCCccoreDD'))
 
+print()
 
+print(eo.end_other('Hiabc', 'abc'))
+print(eo.end_other('AbC', 'HiaBc'))
+print(eo.end_other('abc', 'abXabc'))
