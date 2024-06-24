@@ -1,7 +1,15 @@
 
 def maxProduct(words):
     currWrdLen = 0
-    newWordLen = 0
-    for word in words:
-        currWrdLen = len(word)
-    return currWrdLen
+    follWordLen = 0
+    mxCtWrd = ''
+    for i in range(len(words)):
+        currWrd = words[i]
+        currWrdLen = len(currWrd)
+        follwWrd = words[i+1]
+        follWordLen = len(follwWrd)
+        if follWordLen > currWrdLen:
+            mxCtWrd += follwWrd
+        elif currWrdLen > follWordLen:
+            mxCtWrd += currWrd
+        return currWrdLen

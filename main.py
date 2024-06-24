@@ -101,4 +101,4 @@ print("maxProduct")
 print()
 
 
-print(mp(["abcw","baz","foo","bar","xtfn","abcdef"]))
+print(mp.maxProduct(["abcw","baz","foo","bar","xtfn","abcdef"]))
