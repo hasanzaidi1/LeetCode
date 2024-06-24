@@ -1,15 +1,16 @@
 
 def maxProduct(words):
-    currWrdLen = 0
-    follWordLen = 0
-    mxCtWrd = ''
+    biggestWord = findMaxCntChrs(words)
+    return biggestWord
+
+
+def findMaxCntChrs(words):
+    currWrd = ''
+    mxCtWrd = words[0]
     for i in range(len(words)):
         currWrd = words[i]
-        currWrdLen = len(currWrd)
-        follwWrd = words[i+1]
-        follWordLen = len(follwWrd)
-        if follWordLen > currWrdLen:
-            mxCtWrd += follwWrd
-        elif currWrdLen > follWordLen:
-            mxCtWrd += currWrd
-        return currWrdLen
+        if len(currWrd) > len(mxCtWrd):
+            mxCtWrd = currWrd
+        else:
+            continue
+    return mxCtWrd
