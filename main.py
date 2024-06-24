@@ -101,6 +101,6 @@ print("maxProduct")
 print()
 
 
-print(mp.maxProduct(["abcw","baz","foo","jhbvhjvhjvjhh","bar","xtfn","abssdfsdfsdsdcdef"]))
+print(mp.maxProduct(["abcw","baz","foo","bar","xtfn","abcdef"]))
 print(mp.maxProduct(["a","ab","abc","d","cd","bcd","abcd"]))
 print(mp.maxProduct(["a","aa","aaa","aaaa"]))

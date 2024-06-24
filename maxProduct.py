@@ -1,7 +1,14 @@
 
 def maxProduct(words):
-    biggestWord = findMaxCntChrs(words)
-    return biggestWord
+    maxWord = findMaxCntChrs(words)
+    maxProd = 0
+    for word in words:
+        if word != maxWord and len(word) == len(maxWord): 
+            maxProd = len(word) * len(maxWord)
+        else:
+            words.remove(maxWord)
+            maxWord = findMaxCntChrs(words)
+    return maxProd
 
 
 def findMaxCntChrs(words):
