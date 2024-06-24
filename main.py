@@ -5,6 +5,7 @@ import cat_dog as cd
 import count_code as cc
 import end_other as eo
 import xyz_there as xy
+import maxProduct as mp
 
 print()
 print()
@@ -94,5 +95,10 @@ print(xy.xyz_there('12xyz'))
 
 
 
+print()
+print()
+print("maxProduct")
+print()
 
 
+print(mp(["abcw","baz","foo","bar","xtfn","abcdef"]))
