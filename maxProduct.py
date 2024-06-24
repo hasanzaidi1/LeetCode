@@ -35,11 +35,9 @@ def findMax(words):
 
 def noCommonLetters(word1,word2):
 
-    # Convert both words to sets of characters
     set1 = set(word1)
     set2 = set(word2)
 
-    # Check for intersection between the sets
     if set1 & set2:
         return False
     return True
