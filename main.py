@@ -6,6 +6,7 @@ import count_code as cc
 import end_other as eo
 import xyz_there as xy
 import maxProduct as mp
+import sortByBits as sb
 
 print()
 print()
@@ -104,3 +105,14 @@ print()
 print(mp.maxProduct(["abcw","baz","foo","bar","xtfn","abcdef"]))
 print(mp.maxProduct(["a","ab","abc","d","cd","bcd","abcd"]))
 print(mp.maxProduct(["a","aa","aaa","aaaa"]))
+
+
+
+print()
+print()
+print("sortByBits")
+print()
+
+
+print(sb.sortByBits([0,1,2,3,4,5,6,7,8]))
+
