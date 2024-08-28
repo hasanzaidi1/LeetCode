@@ -8,6 +8,7 @@ import xyz_there as xy
 import maxProduct as mp
 import sortByBits as sb
 import isPalindrome as ip
+import longesCommonPrefix as lcp
 
 print()
 print()
@@ -125,3 +126,11 @@ print()
 print(ip.isPalindrome(122))
 print(ip.isPalindrome(121))
 print(ip.isPalindrome(909990))
+
+print()
+print()
+print("longestCommonPrefix")
+print()
+
+print(lcp.longestCommonPrefix(["flower","flow","flight"]))
+print(lcp.longestCommonPrefix(["dog","racecar","car"]))
