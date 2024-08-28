@@ -7,6 +7,7 @@ import end_other as eo
 import xyz_there as xy
 import maxProduct as mp
 import sortByBits as sb
+import isPalindrome as ip
 
 print()
 print()
@@ -116,3 +117,11 @@ print()
 
 print(sb.sortByBits([0,1,2,3,4,5,6,7,8]))
 
+print()
+print()
+print("isPalindrome")
+print()
+
+print(ip.isPalindrome(122))
+print(ip.isPalindrome(121))
+print(ip.isPalindrome(909990))
