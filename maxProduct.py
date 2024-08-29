@@ -1,43 +1,29 @@
-
 def maxProduct(words):
-    maxWords = find2MaxCntWrds(words)
-    return len(maxWords[0]) * len(maxWords[1])
+
+    sorted_list = sorted(words, key=len, reverse=True)
+    max_sum = 0
+    for i in range(len(sorted_list)-1):
+        first_word_len = len(sorted_list[i])
+        second_word_len = len(sorted_list[i+1])
+        if first_word_len == second_word_len and have_no_common_chars(sorted_list[i], sorted_list[i+1]):
+            max_sum = len(sorted_list[i]) * len(sorted_list[i+1])
+            return max_sum
+        else:
+            continue
+
+    return max_sum
 
 
-def find2MaxCntWrds(words):
-    mxCtWrd2 = ''
-
-    while mxCtWrd2 == '' and len(words) != 0:
-
-        mxCtWrd1 = findMax(words)
-        words.remove(mxCtWrd1)
-        
-        for word in words:
-            if len(word) == len(mxCtWrd1) and noCommonLetters(word,mxCtWrd1):     # maybe add into cond that word isnt the same
-                mxCtWrd2 = word
-                break
-            else:
-                continue
-
-    return mxCtWrd1, mxCtWrd2
-
-
-def findMax(words):
-
-    mxCtWrd = words[0]
-    for i in range(len(words)):
-        currWrd = words[i]
-        if len(currWrd) > len(mxCtWrd):
-            mxCtWrd = currWrd
-    return mxCtWrd
-
-
-
-def noCommonLetters(word1,word2):
+def have_no_common_chars(word1,word2):
 
     set1 = set(word1)
     set2 = set(word2)
 
-    if set1 & set2:
+    if set1.isdisjoint(set2):
+        return True
+    else:
         return False
-    return True
+
+print(maxProduct(["abcw","baz","foo","bar","xtfn","abcdef"]))
+print(maxProduct(["a","ab","abc","d","cd","bcd","abcd"]))
+print(maxProduct(["a","aa","aaa","aaaa"]))
