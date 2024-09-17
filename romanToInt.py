@@ -13,26 +13,23 @@ def romanToInt(s):
 
     sum = 0
     s_list = list(s)
-
-    for i in range(len(s_list)):
+    i = 0
+    while i < len(s_list):
         pair = False
-        if i > 0:
-            # check if i lesser than i-1, if not then take them as a pair
-            curr = hashTable[s_list[i]]
-            prev = hashTable[s_list[i-1]]
-            pair = curr > prev
-            # print("curr Val :",hashTable[s_list[i]])
-            # print("prev Val :",hashTable[s_list[i-1]])
-            # print("SUM: ", sum)
-
+        if i < len(s_list)-1 and hashTable[s_list[i]] < hashTable[s_list[i+1]]:
+            pair = True
         if pair:
-            sum += hashTable[s_list[i-1]]-hashTable[s_list[i]]
+            sum += hashTable[s_list[i+1]]-hashTable[s_list[i]]
+            i += 1
         else:
             sum += hashTable[s_list[i]]
+        i += 1
     return sum
 
 
 print(romanToInt("LVIII"))
 print(romanToInt("III"))
 print(romanToInt("MCMXCIV"))
+print(romanToInt("CMXCIV"))  # Output: 994
+
 
