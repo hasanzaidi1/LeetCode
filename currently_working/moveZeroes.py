@@ -1,16 +1,16 @@
+
 def moveZeroes(nums):
     
-    list_zeroes = []
-    for num in nums:
+    non_zero_index = 0  
 
-        if num == 0:
-            list_zeroes.append(0)
-            nums.remove(num)
-        else:
-            continue
-    for zeroes in list_zeroes:
-        nums.append(zeroes)
+    for current in range(len(nums)):
+        if nums[current] != 0:
+            temp = nums[non_zero_index]
+            nums[non_zero_index] = nums[current]
+            nums[current] = temp
 
+            non_zero_index += 1  
+    
     return nums
     
 
