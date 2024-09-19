@@ -23,6 +23,8 @@ print(isMatch(s = "aa", p = "a*"))
 print(isMatch(s = "aa", p = "a"))
 print(isMatch(s = "ab", p = ".*"))
 print(isMatch(s = "mississippi", p = "mis*is*p*."))
+print(isMatch(s = "aab", p = "c*a*b"))  # false
+
 
 
 
