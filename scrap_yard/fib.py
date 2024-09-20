@@ -14,7 +14,7 @@ def fib_btm_up(n):
         return 1
     bottom_up = [None] * (n+1)
     bottom_up[1] = 1
-    bottom_up[2] = 2
+    bottom_up[2] = 1
 
     for i in range(3,n+1):
         bottom_up[i] = bottom_up[i-1] + bottom_up[i-2]
@@ -34,4 +34,4 @@ def fib_btm_up(n):
 
 
 print(fib(10))
-print(fib_btm_up(50))
+print(fib_btm_up(500))
